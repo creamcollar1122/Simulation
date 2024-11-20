@@ -1,0 +1,21 @@
+{
+  "name": "ESP32 Development Environment",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:debian-11",
+  "features": {
+    "ghcr.io/devcontainers/features/arduino-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "wokwi.wokwi-vscode",      // Wokwi Simulator
+        "platformio.platformio-ide",  // PlatformIO IDE
+        "vsciot-vscode.vscode-arduino", // Arduino
+        "ms-vscode.cpptools"       // C/C++
+      ]
+    }
+  },
+  "postCreateCommand": "platformio update && arduino-cli core update-index",
+  "settings": {
+    "workbench.colorTheme": "Visual Studio Dark"
+  }
+}
