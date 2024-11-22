@@ -1,6 +1,6 @@
 {
   "name": "ESP32 Development Environment",
-  "image": "mcr.microsoft.com/devcontainers/base:debian-11",
+  "image": "mcr.microsoft.com/devcontainers/python:3.9",
   "postCreateCommand": "pip install platformio && arduino-cli core install esp32:esp32",
   "customizations": {
     "vscode": {
@@ -9,12 +9,12 @@
         "vsciot-vscode.vscode-arduino",
         "ms-vscode.cpptools",
         "wokwi.wokwi-vscode"
-      ]
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "workbench.colorTheme": "Visual Studio Dark",
+        "editor.formatOnSave": true
+      }
     }
-  },
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "workbench.colorTheme": "Visual Studio Dark",
-    "editor.formatOnSave": true
   }
 }
